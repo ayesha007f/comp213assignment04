@@ -202,6 +202,12 @@
 
             <button type="submit">Submit</button>
         </form>
+          <footer>
+        <p>
+            <a href="https://www.centennialcollege.ca/continuing-education" target="_blank">Visit Centennial College Continuing Education</a><br>
+            <a href="mailto:continuingeducation@centennialcollege.ca">Email Us: continuingeducation@centennialcollege.ca</a>
+        </p>
+    </footer>
     </main>
     <footer>
         <p>
