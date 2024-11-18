@@ -89,10 +89,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Centennial College</h1>
-        <p>Continuing Education Course/Instructor Evaluation</p>
-    </header>
+   
     <main>
         <form>
             <!-- Course Information -->
