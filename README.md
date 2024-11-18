@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="Centennial College Logo" style="height: 80px; float: left; margin-right: 15px;">
+   <header>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="Centennial College Logo" style="display: block; margin: 0 auto; height: 100px;">
     <h1>Centennial College</h1>
     <p>Continuing Education Course/Instructor Evaluation</p>
+</header>
+
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styling */
