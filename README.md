@@ -1,147 +1,140 @@
-
- <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuing Education Evaluation Form</title>
+    <title>CE Course Evaluation Form</title>
     <style>
-        /* General Styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: olive;
-            color: white;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        /* Header */
         header {
+            background-color: #0055A5;
+            color: white;
             text-align: center;
             padding: 20px;
-            background-color: darkolivegreen;
+        }
+
+        header a {
+            text-decoration: none;
             color: white;
         }
 
         header img {
-            vertical-align: middle;
+            max-width: 150px;
+            display: block;
+            margin: 0 auto;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
-        /* Form Styling */
-        form {
-            max-width: 600px;
+        main {
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #3a5c3a;
+            background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
         fieldset {
-            border: 2px solid white;
-            border-radius: 5px;
-            margin-bottom: 15px;
+            border: 1px solid #ccc;
             padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
         }
 
         legend {
             font-weight: bold;
-            color: white;
         }
 
         label {
-            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
         }
 
         button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background-color: darkolivegreen;
+            background-color: #0055A5;
             color: white;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #2e482e;
-        }
-
-        /* Text Area */
-        textarea {
-            width: 100%;
-            font-size: 14px;
-            border-radius: 5px;
+            background-color: #003f7f;
         }
     </style>
-</head>
+
 <body>
-    <!-- Header Section -->
+    <!-- Header with Banner -->
     <header>
         <a href="https://www.centennialcollege.ca" target="_blank">
-            <img src=""https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180 alt="College Logo" style="height: 60px;">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="Centennial College Logo">
         </a>
-        <h1>Continuing Education Evaluation Form</h1>
+        <h1>CE Course Evaluation Form</h1>
     </header>
 
-    <!-- Main Form Section -->
+    <!-- Evaluation Form -->
     <main>
-        <form action="#" method="post">
-            <!-- Personal Information -->
+        <form action="/submit" method="post">
             <fieldset>
-                <legend><strong>Personal Information</strong></legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone"><br><br>
+                <legend>Course Details</legend>
+                <label for="course-name">Course Name:</label>
+                <input type="text" id="course-name" name="course-name" required>
+
+                <label for="instructor-name">Instructor Name:</label>
+                <input type="text" id="instructor-name" name="instructor-name" required>
+
+                <label for="course-code">Course Code:</label>
+                <input type="text" id="course-code" name="course-code" required>
             </fieldset>
 
-            <!-- Course Evaluation -->
             <fieldset>
-                <legend><strong>Course Evaluation</strong></legend>
-                <p><strong>1. Rate the course content:</strong></p>
-                <input type="radio" id="content-excellent" name="content" value="excellent" required>
-                <label for="content-excellent">Excellent</label><br>
-                <input type="radio" id="content-good" name="content" value="good">
-                <label for="content-good">Good</label><br>
-                <input type="radio" id="content-average" name="content" value="average">
-                <label for="content-average">Average</label><br>
-                <input type="radio" id="content-poor" name="content" value="poor">
-                <label for="content-poor">Poor</label><br><br>
+                <legend>Evaluation Questions</legend>
+                <p>1. The course content met my expectations:</p>
+                <label>
+                    <input type="radio" name="question1" value="strongly-agree" required> Strongly Agree
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="agree"> Agree
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="neutral"> Neutral
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="disagree"> Disagree
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="strongly-disagree"> Strongly Disagree
+                </label>
 
-                <p><strong>2. Rate the instructor's teaching skills:</strong></p>
-                <input type="radio" id="skills-excellent" name="teaching" value="excellent" required>
-                <label for="skills-excellent">Excellent</label><br>
-                <input type="radio" id="skills-good" name="teaching" value="good">
-                <label for="skills-good">Good</label><br>
-                <input type="radio" id="skills-average" name="teaching" value="average">
-                <label for="skills-average">Average</label><br>
-                <input type="radio" id="skills-poor" name="teaching" value="poor">
-                <label for="skills-poor">Poor</label><br><br>
-
-                <p><strong>3. Would you recommend this course to others?</strong></p>
-                <input type="radio" id="recommend-yes" name="recommend" value="yes" required>
-                <label for="recommend-yes">Yes</label><br>
-                <input type="radio" id="recommend-no" name="recommend" value="no">
-                <label for="recommend-no">No</label><br><br>
+                <p>2. The instructor demonstrated knowledge of the subject:</p>
+                <!-- Repeat similar structure for other questions -->
             </fieldset>
 
-            <!-- Suggestions -->
             <fieldset>
-                <legend><strong>Suggestions and Comments</strong></legend>
-                <label for="comments">Your Comments:</label><br>
-                <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+                <legend>Additional Comments</legend>
+                <label for="comments">Please share your feedback:</label>
+                <textarea id="comments" name="comments" rows="5"></textarea>
             </fieldset>
 
-            <!-- Submit Section -->
+            <!-- Submit Button -->
             <button type="submit">Submit</button>
         </form>
     </main>
