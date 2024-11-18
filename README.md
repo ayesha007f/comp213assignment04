@@ -10,7 +10,7 @@
     <!-- Header Section -->
     <header>
         <a href="https://www.centennialcollege.ca" target="_blank">
-            <img src="college_logo_placeholder.png" alt="College Logo" style="height: 60px;">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="College Logo" style="height: 60px;">
         </a>
         <h1>Continuing Education Evaluation Form</h1>
     </header>
