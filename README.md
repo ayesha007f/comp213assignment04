@@ -1,32 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CE Course Evaluation Form</title>
+     <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="Centennial College Logo" style="height: 80px; float: left; margin-right: 15px;">
+    <h1>Centennial College</h1>
+    <p>Continuing Education Course/Instructor Evaluation</p>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #808000; /* Olive green background */
             color: #333;
         }
 
         header {
-            background-color: #0055A5;
+            background-color: #556B2F;
             color: white;
             text-align: center;
-            padding: 20px;
-        }
-
-        header a {
-            text-decoration: none;
-            color: white;
-        }
-
-        header img {
-            max-width: 150px;
-            display: block;
-            margin: 0 auto;
+            padding: 15px;
         }
 
         main {
@@ -38,9 +33,13 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
+        h1, h2 {
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold; /* Subheading bold */
+            color: #556B2F;
         }
 
         fieldset {
@@ -56,10 +55,10 @@
 
         label {
             display: block;
-            margin-top: 10px;
+            margin: 10px 0 5px;
         }
 
-        input, textarea {
+        input, select, textarea {
             width: 100%;
             padding: 8px;
             margin-top: 5px;
@@ -67,8 +66,13 @@
             border: 1px solid #ccc;
         }
 
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
         button {
-            background-color: #0055A5;
+            background-color: #556B2F;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -77,66 +81,128 @@
         }
 
         button:hover {
-            background-color: #003f7f;
+            background-color: #6B8E23;
         }
     </style>
-
+</head>
 <body>
-    <!-- Header with Banner -->
     <header>
-        <a href="https://www.centennialcollege.ca" target="_blank">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.VK9lUV3pLUerqnIy4oenfwHaCY&pid=Api&P=0&h=180" alt="Centennial College Logo">
-        </a>
-        <h1>CE Course Evaluation Form</h1>
+        <h1>Centennial College</h1>
+        <p>Continuing Education Course/Instructor Evaluation</p>
     </header>
-
-    <!-- Evaluation Form -->
     <main>
-        <form action="/submit" method="post">
+        <form>
+            <!-- Course Information -->
             <fieldset>
-                <legend>Course Details</legend>
-                <label for="course-name">Course Name:</label>
-                <input type="text" id="course-name" name="course-name" required>
+                <legend>Course Information</legend>
+                <label for="courseName">Course Name/Code:</label>
+                <input type="text" id="courseName" name="courseName">
 
-                <label for="instructor-name">Instructor Name:</label>
-                <input type="text" id="instructor-name" name="instructor-name" required>
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester">
+                    <option value="Fall">Fall</option>
+                    <option value="Winter">Winter</option>
+                    <option value="Spring/Summer">Spring/Summer</option>
+                </select>
 
-                <label for="course-code">Course Code:</label>
-                <input type="text" id="course-code" name="course-code" required>
+                <label for="year">Year:</label>
+                <input type="text" id="year" name="year">
+
+                <label for="instructor">Instructor:</label>
+                <input type="text" id="instructor" name="instructor">
             </fieldset>
 
+            <!-- Instructor Evaluation -->
             <fieldset>
-                <legend>Evaluation Questions</legend>
-                <p>1. The course content met my expectations:</p>
-                <label>
-                    <input type="radio" name="question1" value="strongly-agree" required> Strongly Agree
-                </label>
-                <label>
-                    <input type="radio" name="question1" value="agree"> Agree
-                </label>
-                <label>
-                    <input type="radio" name="question1" value="neutral"> Neutral
-                </label>
-                <label>
-                    <input type="radio" name="question1" value="disagree"> Disagree
-                </label>
-                <label>
-                    <input type="radio" name="question1" value="strongly-disagree"> Strongly Disagree
-                </label>
+                <legend>Instructor Evaluation</legend>
+                <h2>How would you rate the instructor's:</h2>
 
-                <p>2. The instructor demonstrated knowledge of the subject:</p>
-                <!-- Repeat similar structure for other questions -->
+                <label>1. Knowledge of Subject:</label>
+                <label><input type="radio" name="knowledge" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="knowledge" value="Good"> Good</label>
+                <label><input type="radio" name="knowledge" value="Fair"> Fair</label>
+                <label><input type="radio" name="knowledge" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>2. Helpfulness:</label>
+                <label><input type="radio" name="helpfulness" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="helpfulness" value="Good"> Good</label>
+                <label><input type="radio" name="helpfulness" value="Fair"> Fair</label>
+                <label><input type="radio" name="helpfulness" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>3. Courtesy and Respect for All Students:</label>
+                <label><input type="radio" name="courtesy" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="courtesy" value="Good"> Good</label>
+                <label><input type="radio" name="courtesy" value="Fair"> Fair</label>
+                <label><input type="radio" name="courtesy" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>4. Communication Skills:</label>
+                <label><input type="radio" name="communication" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="communication" value="Good"> Good</label>
+                <label><input type="radio" name="communication" value="Fair"> Fair</label>
+                <label><input type="radio" name="communication" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>5. Overall Performance:</label>
+                <label><input type="radio" name="performance" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="performance" value="Good"> Good</label>
+                <label><input type="radio" name="performance" value="Fair"> Fair</label>
+                <label><input type="radio" name="performance" value="Not Satisfactory"> Not Satisfactory</label>
             </fieldset>
 
+            <!-- Course Evaluation -->
             <fieldset>
-                <legend>Additional Comments</legend>
-                <label for="comments">Please share your feedback:</label>
-                <textarea id="comments" name="comments" rows="5"></textarea>
+                <legend>Course Evaluation</legend>
+                <h2>How would you rate the:</h2>
+
+                <label>6. Course Materials:</label>
+                <label><input type="radio" name="materials" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="materials" value="Good"> Good</label>
+                <label><input type="radio" name="materials" value="Fair"> Fair</label>
+                <label><input type="radio" name="materials" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>7. How much did this course meet your Expectations?</label>
+                <label><input type="radio" name="expectations" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="expectations" value="Good"> Good</label>
+                <label><input type="radio" name="expectations" value="Fair"> Fair</label>
+                <label><input type="radio" name="expectations" value="Not Satisfactory"> Not Satisfactory</label>
+
+                <label>8. Overall Rating:</label>
+                <label><input type="radio" name="overall" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="overall" value="Good"> Good</label>
+                <label><input type="radio" name="overall" value="Fair"> Fair</label>
+                <label><input type="radio" name="overall" value="Not Satisfactory"> Not Satisfactory</label>
             </fieldset>
 
-            <!-- Submit Button -->
+            <!-- General Information -->
+            <fieldset>
+                <legend>General Information</legend>
+
+                <label>9. Was the Course Outline reviewed/explained?</label>
+                <label><input type="radio" name="outline" value="Yes"> Yes</label>
+                <label><input type="radio" name="outline" value="No"> No</label>
+                <label><input type="radio" name="outline" value="Not Sure"> Not Sure</label>
+
+                <label>10. Would you recommend this Course to a friend?</label>
+                <label><input type="radio" name="recommend" value="Yes"> Yes</label>
+                <label><input type="radio" name="recommend" value="No"> No</label>
+                <label><input type="radio" name="recommend" value="Not Sure"> Not Sure</label>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <fieldset>
+                <legend>Other Comments</legend>
+                <label for="bestThing">11. What is the best thing about this course?</label>
+                <textarea id="bestThing" name="bestThing" rows="3"></textarea>
+
+                <label for="improve">12. How could we improve this course?</label>
+                <textarea id="improve" name="improve" rows="3"></textarea>
+
+                <label for="other">13. Other Comments:</label>
+                <textarea id="other" name="other" rows="3"></textarea>
+            </fieldset>
+
             <button type="submit">Submit</button>
         </form>
     </main>
 </body>
 </html>
+
